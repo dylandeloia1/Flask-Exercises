@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block title %}Flask 2{% endblock %}
+
+{% block body %}
+
+<div class="container mt-5">
+    <h2 class="mb-4">Enter an integer to see if its even or odd!</h2>
+    <label for="num">Number</label>
+
+    <form class="mt-2 input-group" action="/result" method="GET">
+        <input class="form-control" type="text" name="num" id="num">
+        <input class="btn btn-primary" type="submit" value="Calculate">
+    </form>
+</div>
+
+{% endblock %}
