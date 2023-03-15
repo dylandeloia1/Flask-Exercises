@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block title %}Flask 3{% endblock %}
+
+{% block body %}
+
+<div class="container mt-5">
+    <h1>Registered Students</h1>
+    <p>The following students have registered for student organizations</p>
+    <table class="table mt-2">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Organization</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in students %}
+            <tr>
+                <td>{{ student }}</td>
+                <td>{{ students[student] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+
+{% endblock %}
